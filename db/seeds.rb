@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+4.times do
+  flat = Flat.create!(
+    name: Faker::Fantasy::Tolkien.character,
+    address: Faker::Address.street_address,
+    description:Faker::Markdown.emphasis,
+    price_per_night: rand(50..100),
+    number_of_guests: rand(1..7)
+  )
+  puts "Flat with ID: #{flat.id} has been created"
+end
+
+puts "Finished!"

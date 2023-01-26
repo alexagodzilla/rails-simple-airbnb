@@ -1,0 +1,20 @@
+<div class="container">
+ <h1>Flats</h1>
+
+  <form action="/">
+    <label for="search"></label>
+    <input id="search" type="text">
+    <input type="submit">
+  </form>
+
+    <% @flats.each do |flat| %>
+      <%= render flat %>
+      <p>
+        <%= link_to "See the flat", flat %>
+      </p>
+    <% end %>
+    <%= link_to "Create a new flat", new_flat_path %>
+</div>
+
+
+<!-- get the input from the form rails basics jan 17 queries pass the query to th -->
